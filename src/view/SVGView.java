@@ -439,6 +439,11 @@ public class SVGView implements IView {
     throw new UnsupportedOperationException("This operation is unsupported.");
   }
 
+  @Override
+  public void showErrorMessage(String error) {
+
+  }
+
 }
 
 

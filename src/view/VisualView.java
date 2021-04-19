@@ -39,6 +39,11 @@ public class VisualView implements IView {
     });
   }
 
+  @Override
+  public void showErrorMessage(String error) {
+
+  }
+
   /**
    * Used to show the visual view.
    */

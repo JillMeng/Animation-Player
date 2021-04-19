@@ -4,6 +4,7 @@ package view;
  * This interface represents a view of animation.
  */
 public interface IView {
+
   /**
    * Returns the string output of textual view and svg view.
    *
@@ -15,5 +16,12 @@ public interface IView {
    * Show visual view.
    */
   void showVisual();
+
+  /**
+   * Transmit an error message to the view, in case
+   * the command could not be processed correctly
+   * @param error
+   */
+  void showErrorMessage(String error);
 
 }

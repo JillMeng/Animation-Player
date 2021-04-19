@@ -23,6 +23,8 @@ public class ViewFactory {
         return new SVGView(model);
       case "visual":
         return new VisualView(model);
+      case "playback":
+        return new EditView(model);
       default:
         throw new IllegalArgumentException("Invalid view.");
     }
