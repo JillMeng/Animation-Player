@@ -54,7 +54,6 @@ public class MyPanel extends JPanel {
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
     Graphics2D graphics2D = (Graphics2D) g;
-
     //Draw all the shapes from the model at tick
     for (IShape shape : model.getCurrentStatus(tick)) {
       graphics2D.setColor(shape.getRGB());

@@ -44,4 +44,9 @@ public class TextualView implements IView {
   public void showVisual() {
     throw new UnsupportedOperationException("This operation is unsupported.");
   }
+
+  @Override
+  public void showErrorMessage(String error) {
+
+  }
 }
