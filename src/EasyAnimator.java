@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 import model.AnimationReader;
 import model.AnimationBuilder;
-import model.Model;
+import model.ReadWriteModel;
 import model.IModel;
 import view.IView;
 import view.ViewFactory;
@@ -29,8 +29,8 @@ public final class EasyAnimator {
   public static void main(String[] args) throws IOException {
 
     AnimationReader reader = new AnimationReader();
-    AnimationBuilder<IModel> builder = new Model.Builder();
-    IModel model = new Model();
+    AnimationBuilder<IModel> builder = new ReadWriteModel.Builder();
+    IModel model = new ReadWriteModel();
     String output = "";
 
     if ((Arrays.stream(args).filter(x -> x.equals("-in")).count() == 0)

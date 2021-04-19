@@ -2,7 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import model.IModel;
-import model.Model;
+import model.ReadWriteModel;
 import model.Motion;
 import model.Shape;
 import view.IView;
@@ -19,7 +19,7 @@ public class TestModel {
 
   @Before
   public void setup() {
-    model = new Model();
+    model = new ReadWriteModel();
   }
 
   @Test

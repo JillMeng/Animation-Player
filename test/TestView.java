@@ -1,7 +1,7 @@
 import org.junit.Test;
 
 import model.IModel;
-import model.Model;
+import model.ReadWriteModel;
 import model.Shape;
 import model.Motion;
 import view.IView;
@@ -27,7 +27,7 @@ public class TestView {
     Motion move = new Motion("R", 10, 200,
             200, 50, 100, 1, 0, 0, 50, 300, 300,
             50, 100, 1, 0, 0);
-    IModel model = new Model();
+    IModel model = new ReadWriteModel();
     model.addShape(r);
     model.addShape(c);
     model.addMotion(move);
@@ -55,7 +55,7 @@ public class TestView {
             0, 0, 1, 30, 600, 100, 60, 30, 0, 0, 1);
     Motion move2 = new Motion("C", 20, 500, 100, 60, 30,
             0, 0, 1, 30, 600, 400, 60, 30, 0, 0, 1);
-    IModel model = new Model();
+    IModel model = new ReadWriteModel();
     model.addShape(r);
     model.addShape(c);
     model.addMotion(move);

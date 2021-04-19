@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
  * This class represents a model of animation that implements all the operations from the IModel
  * interface.
  */
-public class Model implements IModel {
+public class ReadWriteModel implements IModel {
   List<IShape> shapeList;
   List<IMotion> motionList;
 
@@ -24,7 +24,7 @@ public class Model implements IModel {
   /**
    * Constructs a model without parameter, and set shapeList and motionList as two linked lists.
    */
-  public Model() {
+  public ReadWriteModel() {
     shapeList = new LinkedList<>();
     motionList = new LinkedList<>();
   }
@@ -217,7 +217,7 @@ public class Model implements IModel {
      * Constructs an animation builder.
      */
     public Builder() {
-      model = new Model();
+      model = new ReadWriteModel();
     }
 
     @Override
