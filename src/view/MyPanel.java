@@ -17,7 +17,6 @@ import model.IShape;
  * This class represents a panel that is used to draw all the shapes at a given time point.
  */
 public class MyPanel extends JPanel {
-
   private IModel model;
   private Timer timer;
   private int tick = 0;
@@ -31,7 +30,6 @@ public class MyPanel extends JPanel {
     this.model = model;
     this.setPreferredSize(new Dimension(model.getBoundWidth(),model.getBoundHeight()));
     this.setBackground(Color.WHITE);
-
     timer = new Timer(1000 / model.getTickPerSecond(), new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
