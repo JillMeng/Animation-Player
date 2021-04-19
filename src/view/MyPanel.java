@@ -17,7 +17,6 @@ import model.IShape;
  * This class represents a panel that is used to draw all the shapes at a given time point.
  */
 public class MyPanel extends JPanel {
-
   private IModel model;
   private Timer timer;
   private int tick = 0;
