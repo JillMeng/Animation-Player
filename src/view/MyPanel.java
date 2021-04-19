@@ -22,7 +22,6 @@ public class MyPanel extends JPanel {
   private Timer timer;
   private int tick = 0;
 
-
   /**
    * Constructs a panel using given model.
    *
