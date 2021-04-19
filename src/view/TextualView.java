@@ -42,6 +42,6 @@ public class TextualView implements IView {
 
   @Override
   public void showVisual() {
-    showVisual();
+    throw new UnsupportedOperationException("This operation is unsupported.");
   }
 }

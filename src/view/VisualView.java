@@ -29,7 +29,7 @@ public class VisualView implements IView {
 
   @Override
   public String showView() {
-    return null;
+    throw new UnsupportedOperationException("This operation is unsupported.");
   }
 
   @Override
