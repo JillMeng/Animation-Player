@@ -30,7 +30,6 @@ public class MyPanel extends JPanel {
     this.model = model;
     this.setPreferredSize(new Dimension(model.getBoundWidth(),model.getBoundHeight()));
     this.setBackground(Color.WHITE);
-
     timer = new Timer(1000 / model.getTickPerSecond(), new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
