@@ -34,7 +34,7 @@ public class TestModel {
     model.addShape(r);
     model.addShape(c);
     model.addMotion(move);
-    IView textView = new TextualView(model);
+    IView textView = new TextualView(model, 20);
 
     assertEquals("Create rgb(1,0,0) rectangle R with corner at (200, 200), "
                     + "width 50 and height 100\n"

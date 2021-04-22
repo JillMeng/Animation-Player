@@ -108,12 +108,12 @@ public interface IModel {
    */
   void setBoundHeight(int boundHeight);
 
-  /**
-   * set the speed of the animation to the given tickPerSecond.
-   * 
-   * @param tickPerSecond the given tickPerSecond to be set as speed
-   */
-  void setTickPerSecond(int tickPerSecond);
+//  /**
+//   * set the speed of the animation to the given tickPerSecond.
+//   *
+//   * @param tickPerSecond the given tickPerSecond to be set as speed
+//   */
+//  void setTickPerSecond(int tickPerSecond);
 
   /**
    * Returns the maximum end time of the motion in the motion list.

@@ -1,27 +1,94 @@
 package controller;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
 
 import javax.swing.*;
 
+import model.AnimationBuilder;
+import model.AnimationReader;
 import model.IModel;
+import model.Model;
+import view.EditView;
 import view.IView;
+import view.MyPanel;
+import view.ViewFactory;
 
-public class Controller implements IController{
+public class Controller extends JPanel implements IController {
 
-  private final IModel model;
-  private final IView view;
+  private IModel model;
+  private IView view;
   private Timer timer;
+  private int tickPerSecond;
   private int tick = 0;
+  private MyPanel panel;
+  boolean looping;
 
   /**
    * Construct the controller that can take in a model and show a view.
    * @param model a non-null animation Model
-   * @param view the view
    */
-  public Controller(IModel model, IView view) {
+  public Controller(IModel model, int tickPerSecond) {
     this.model = model;
+    this.tickPerSecond = tickPerSecond;
+    this.looping = false;
+  }
+
+  public void setView(IView view) {
     this.view = view;
+//    view.setTickPerSecond(tickPerSecond);
+    view.addFeatures(this);
+
+  }
+
+  @Override
+  public void start() {
+    view.getPanel().setVisible(true);
+    view.getPanel().getTimer().start();
+  }
+
+  @Override
+  public void pause() {
+    view.getPanel().getTimer().stop();
+  }
+
+  @Override
+  public void resume() {
+    view.getPanel().getTimer().restart();
+  }
+
+  @Override
+  public void restart() {
+    view.getPanel().getTimer().start();
+    view.getPanel().getTimer().setDelay(1000 / view.getPanel().getTickPerSecond());
+    view.getPanel().setTick(0);
+  }
+
+  @Override
+  public void enableLooping() {
+
+  }
+
+  @Override
+  public void disableLooping() {
+
+  }
+
+  @Override
+  public void increaseSpeed() {
+    view.getPanel().getTimer().setDelay(view.getPanel().getTickPerSecond() + 1);
+  }
+
+  @Override
+  public void decreaseSpeed() {
+    view.getPanel().getTimer().setDelay(1000 / view.getPanel().getTickPerSecond() - 1);
   }
 
   //callback to reset the view

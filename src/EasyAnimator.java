@@ -8,10 +8,13 @@ import java.util.Arrays;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import controller.Controller;
+import controller.IController;
 import model.AnimationReader;
 import model.AnimationBuilder;
 import model.Model;
 import model.IModel;
+import view.EditView;
 import view.IView;
 import view.ViewFactory;
 
@@ -55,20 +58,29 @@ public final class EasyAnimator {
       }
     }
 
-    model.setTickPerSecond(1);
+    int tickPerSecond = 1;
     for (int i = 0; i < args.length; i++) {
       if (args[i].equals("-speed")) {
         int speed = Integer.parseInt(args[i + 1]);
-        model.setTickPerSecond(speed);
+        tickPerSecond = speed;
       }
     }
 
+    IController controller = new Controller(model, tickPerSecond);
+//    IView view = new EditView(model);
+//    controller.setView(view);
+
     for (int i = 0; i < args.length; i++) {
       if (args[i].equals("-view")) {
-        IView outputView = ViewFactory.makeView(args[i + 1],model);
+        IView outputView = ViewFactory.makeView(args[i + 1], model, tickPerSecond);
+        controller.setView(outputView);
         if (args[i + 1].equals("visual")) {
           outputView.showVisual();
-        } else {
+        }
+        else if (args[i + 1].equals("playback")) {
+          controller.setView(outputView);
+        }
+        else {
           output = outputView.showView();
         }
       }
@@ -89,6 +101,5 @@ public final class EasyAnimator {
     if (!hasOut) {
       System.out.println(output);
     }
-
   }
 }

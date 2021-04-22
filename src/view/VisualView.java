@@ -1,11 +1,12 @@
 package view;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
+import controller.IController;
 import model.IModel;
 
 /**
@@ -15,15 +16,17 @@ public class VisualView implements IView {
 
   MyPanel panel;
   IModel model;
+  int tickPerSecond;
 
   /**
    * Constructs a visual view using given model.
    *
    * @param model1 the given model used to construct a visual view
    */
-  public VisualView(IModel model1) {
+  public VisualView(IModel model1, int tickPerSecond) {
     super();
-    panel = new MyPanel(model1);
+    this.tickPerSecond = tickPerSecond;
+    panel = new MyPanel(model1, tickPerSecond);
     model = model1;
   }
 
@@ -43,6 +46,31 @@ public class VisualView implements IView {
   public void showErrorMessage(String error) {
 
   }
+
+  @Override
+  public void addFeatures(IController features) {
+
+  }
+
+  @Override
+  public void setPanel(MyPanel panel) {
+
+  }
+
+  @Override
+  public MyPanel getPanel() {
+    return null;
+  }
+
+//  @Override
+//  public int getTickPerSecond() {
+//    return this.tickPerSecond;
+//  }
+
+//  @Override
+//  public void setTickPerSecond(int tickPerSecond) {
+//    this.tickPerSecond = tickPerSecond;
+//  }
 
   /**
    * Used to show the visual view.

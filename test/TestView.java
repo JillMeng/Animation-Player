@@ -31,7 +31,7 @@ public class TestView {
     model.addShape(r);
     model.addShape(c);
     model.addMotion(move);
-    textView = new TextualView(model);
+    textView = new TextualView(model, 20);
 
     assertEquals("Create rgb(1,0,0) rectangle R with corner at (200, 200), "
                     + "width 50 and height 100\n"
@@ -59,8 +59,8 @@ public class TestView {
     model.addShape(r);
     model.addShape(c);
     model.addMotion(move);
-    model.setTickPerSecond(20);
-    svgView = new SVGView(model);
+//    model.setTickPerSecond(20);
+    svgView = new SVGView(model, 20);
     assertEquals("<svg width=\"1000\" height=\"1000\" version=\"1.1\" "
             + "xmlns=\"http://www.w3.org/2000/svg\">\n" + "\n"
             + "<rect id=\"R\" x=\"200\" y=\"200\" width=\"50\" height=\"100\" "
