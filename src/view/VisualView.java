@@ -47,20 +47,6 @@ public class VisualView implements IView {
 
   }
 
-  @Override
-  public void addFeatures(IController features) {
-
-  }
-
-  @Override
-  public void setPanel(MyPanel panel) {
-
-  }
-
-  @Override
-  public MyPanel getPanel() {
-    return null;
-  }
 
 //  @Override
 //  public int getTickPerSecond() {

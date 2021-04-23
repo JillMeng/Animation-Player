@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Graphics2D;
 import java.awt.Graphics;
+import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -22,6 +24,7 @@ public class MyPanel extends JPanel {
   private Timer timer;
   private int tick = 0;
   int tickPerSecond;
+  private List<IShape> currentShapes = new LinkedList<>();
 
   /**
    * Constructs a panel using given model.
@@ -33,27 +36,13 @@ public class MyPanel extends JPanel {
     this.tickPerSecond = tickPerSecond;
     this.setPreferredSize(new Dimension(model.getBoundWidth(),model.getBoundHeight()));
     this.setBackground(Color.WHITE);
-    timer = new Timer(1000 / tickPerSecond, new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        if (tick >= model.longestTime()) {
-          timer.stop();
-          return;
-        }
-        tick++;
-        repaint();
-      }
-    });
-
-    timer.setRepeats(true);
-    timer.start();
   }
 
-//  public MyPanel(IModel model) {
-//    this.model = model;
-//    this.setPreferredSize(new Dimension(model.getBoundWidth(), model.getBoundHeight()));
-//    this.setBackground(Color.WHITE);
-//  }
+
+  public void drawShapes(int tick) {
+    currentShapes = model.getCurrentStatus(tick);
+  }
+
 
   /**
    * Draw all the shapes from the model at a time point.
@@ -64,7 +53,7 @@ public class MyPanel extends JPanel {
     super.paintComponent(g);
     Graphics2D graphics2D = (Graphics2D) g;
     //Draw all the shapes from the model at tick
-    for (IShape shape : model.getCurrentStatus(tick)) {
+    for (IShape shape : currentShapes) {
       graphics2D.setColor(shape.getRGB());
       switch (shape.getType()) {
         case "rectangle":
