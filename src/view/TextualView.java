@@ -53,23 +53,4 @@ public class TextualView implements IView {
 
   }
 
-  @Override
-  public void addFeatures(IController features) {
-
-  }
-
-  @Override
-  public void setPanel(MyPanel panel) {
-
-  }
-
-  @Override
-  public MyPanel getPanel() {
-    return null;
-  }
-
-//  @Override
-//  public void setTickPerSecond(int tickPerSecond) {
-//
-//  }
 }

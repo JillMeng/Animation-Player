@@ -29,12 +29,5 @@ public interface IView {
    */
   void showErrorMessage(String error);
 
-  void addFeatures(IController features);
-
-  void setPanel(MyPanel panel);
-
-  MyPanel getPanel();
-
-//  void setTickPerSecond(int tickPerSecond);
 
 }

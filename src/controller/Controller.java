@@ -24,7 +24,7 @@ import view.ViewFactory;
 public class Controller extends JPanel implements IController {
 
   private IModel model;
-  private IView view;
+  private EditView view;
   private Timer timer;
   private int tickPerSecond;
   private int tick = 0;
@@ -35,40 +35,56 @@ public class Controller extends JPanel implements IController {
    * Construct the controller that can take in a model and show a view.
    * @param model a non-null animation Model
    */
-  public Controller(IModel model, int tickPerSecond) {
+  public Controller(IModel model, EditView view, int tickPerSecond) {
     this.model = model;
+    this.view = view;
     this.tickPerSecond = tickPerSecond;
     this.looping = false;
+
+    timer = new Timer(1000 / tickPerSecond, new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        if (tick >= model.longestTime()) {
+          timer.stop();
+          return;
+        }
+        view.draw(tick++);
+        view.refresh();
+      }
+    });
   }
 
-  public void setView(IView view) {
-    this.view = view;
-//    view.setTickPerSecond(tickPerSecond);
-    view.addFeatures(this);
 
+  @Override
+  public void setView() {
+    view.addFeatures(this);
   }
 
   @Override
   public void start() {
-    view.getPanel().setVisible(true);
-    view.getPanel().getTimer().start();
+    view.makeVisible();
+    timer.start();
   }
 
   @Override
   public void pause() {
-    view.getPanel().getTimer().stop();
+//    view.getPanel().getTimer().stop();
+    timer.stop();
   }
 
   @Override
   public void resume() {
-    view.getPanel().getTimer().restart();
+//    view.getPanel().getTimer().restart();
+    timer.restart();
   }
 
   @Override
   public void restart() {
-    view.getPanel().getTimer().start();
-    view.getPanel().getTimer().setDelay(1000 / view.getPanel().getTickPerSecond());
-    view.getPanel().setTick(0);
+//    view.getPanel().getTimer().start();
+//    view.getPanel().getTimer().setDelay(1000 / view.getPanel().getTickPerSecond());
+//    view.getPanel().setTick(0);
+    tick = 0;
+    timer.restart();
   }
 
   @Override
@@ -76,73 +92,22 @@ public class Controller extends JPanel implements IController {
 
   }
 
-  @Override
-  public void disableLooping() {
-
-  }
+//  @Override
+//  public void disableLooping() {
+//  }
 
   @Override
   public void increaseSpeed() {
-    view.getPanel().getTimer().setDelay(view.getPanel().getTickPerSecond() + 1);
+//    view.getPanel().getTimer().setDelay(view.getPanel().getTickPerSecond() + 1);
+    tickPerSecond = tickPerSecond + 50;
+    timer.restart();
   }
 
   @Override
   public void decreaseSpeed() {
-    view.getPanel().getTimer().setDelay(1000 / view.getPanel().getTickPerSecond() - 1);
+//    view.getPanel().getTimer().setDelay(1000 / view.getPanel().getTickPerSecond() - 10);
+    tickPerSecond = tickPerSecond - 5;
+    timer.restart();
   }
-
-  //callback to reset the view
-//  @Override
-//  public void go() {
-//    this.view.setCommandButtonListener(this);
-//    this.view.makeVisible();
-//  }
-//  @Override
-//  public void processInput(String text) {
-//    model.setString(text);
-//
-//    // clear input text field
-//    view.clearInputString();
-//    // finally echo the string in view
-//    view.setEchoOutput(model.getString());
-//
-//    // set focus back to main frame so that keyboard events work
-//    view.resetFocus();
-//
-//  }
-
-  //Use action performed to callback/reset view command
-  //  @Override
-  //  public void actionPerformed(ActionEvent e) {
-  //    String command = view.getTurtleCommand();
-  //    String status;
-  //
-  //    try {
-  //      status = processCommand(command);
-  //    }
-  //    catch (Exception ex) {
-  //      view.showErrorMessage(ex.getMessage());
-  //    }
-  //    view.setLines(model.getLines());
-  //    //set turtle position and heading
-  //    view.setTurtlePosition(model.getPosition());
-  //    view.setTurtleHeading(model.getHeading());
-  //    view.refresh();
-  //  }
-
-//  timer = new Timer(1000 / model.getTickPerSecond(), new ActionListener() {
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//      if (tick >= model.longestTime()) {
-//        timer.stop();
-//        return;
-//      }
-//      tick++;
-//      repaint();
-//    }
-//  });
-//
-//    timer.setRepeats(true);
-//    timer.start();
 
 }

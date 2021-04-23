@@ -66,19 +66,16 @@ public final class EasyAnimator {
       }
     }
 
-    IController controller = new Controller(model, tickPerSecond);
-//    IView view = new EditView(model);
-//    controller.setView(view);
-
     for (int i = 0; i < args.length; i++) {
       if (args[i].equals("-view")) {
         IView outputView = ViewFactory.makeView(args[i + 1], model, tickPerSecond);
-        controller.setView(outputView);
+//        controller.setView();
         if (args[i + 1].equals("visual")) {
           outputView.showVisual();
         }
         else if (args[i + 1].equals("playback")) {
-          controller.setView(outputView);
+          IController controller = new Controller(model, (EditView) outputView, tickPerSecond);
+          controller.setView();
         }
         else {
           output = outputView.showView();
