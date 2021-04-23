@@ -1,5 +1,10 @@
 package view;
 
+import java.awt.*;
+import java.util.Timer;
+
+import controller.IController;
+
 /**
  * This interface represents a view of animation.
  */
@@ -23,5 +28,13 @@ public interface IView {
    * @param error
    */
   void showErrorMessage(String error);
+
+  void addFeatures(IController features);
+
+  void setPanel(MyPanel panel);
+
+  MyPanel getPanel();
+
+//  void setTickPerSecond(int tickPerSecond);
 
 }

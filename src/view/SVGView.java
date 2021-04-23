@@ -1,5 +1,6 @@
 package view;
 
+import controller.IController;
 import model.Action;
 import model.IModel;
 import model.IMotion;
@@ -19,9 +20,10 @@ public class SVGView implements IView {
    *
    * @param model the given model used to construct the SVG View
    */
-  public SVGView(IModel model) {
+  public SVGView(IModel model, int tickPerSecond) {
     this.model = model;
-    tickPerSecond = model.getTickPerSecond();
+    this.tickPerSecond = tickPerSecond;
+//    tickPerSecond = model.getTickPerSecond();
     timer = 1000 / tickPerSecond;
   }
 
@@ -443,6 +445,26 @@ public class SVGView implements IView {
   public void showErrorMessage(String error) {
 
   }
+
+  @Override
+  public void addFeatures(IController features) {
+
+  }
+
+  @Override
+  public void setPanel(MyPanel panel) {
+
+  }
+
+  @Override
+  public MyPanel getPanel() {
+    return null;
+  }
+
+//  @Override
+//  public void setTickPerSecond(int tickPerSecond) {
+//    this.tickPerSecond = tickPerSecond;
+//  }
 
 }
 

@@ -2,6 +2,7 @@ package view;
 
 import java.util.stream.Collectors;
 
+import controller.IController;
 import model.IModel;
 import model.IMotion;
 import model.IShape;
@@ -12,14 +13,16 @@ import model.IShape;
 public class TextualView implements IView {
 
   private IModel model;
+  private int tickPerSecond;
 
   /**
    * Constructs a textual view using the given model.
    *
    * @param model the given model used to construct the textual view
    */
-  public TextualView(IModel model) {
+  public TextualView(IModel model, int tickPerSecond) {
     this.model = model;
+    this.tickPerSecond = tickPerSecond;
   }
 
   @Override
@@ -49,4 +52,24 @@ public class TextualView implements IView {
   public void showErrorMessage(String error) {
 
   }
+
+  @Override
+  public void addFeatures(IController features) {
+
+  }
+
+  @Override
+  public void setPanel(MyPanel panel) {
+
+  }
+
+  @Override
+  public MyPanel getPanel() {
+    return null;
+  }
+
+//  @Override
+//  public void setTickPerSecond(int tickPerSecond) {
+//
+//  }
 }

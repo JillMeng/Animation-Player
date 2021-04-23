@@ -131,10 +131,10 @@ public class Model implements IModel {
     this.boundHeight = boundHeight;
   }
 
-  @Override
-  public void setTickPerSecond(int tickPerSecond) {
-    this.tickPerSecond = tickPerSecond;
-  }
+//  @Override
+//  public void setTickPerSecond(int tickPerSecond) {
+//    this.tickPerSecond = tickPerSecond;
+//  }
 
   @Override
   public int longestTime() {

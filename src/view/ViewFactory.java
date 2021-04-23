@@ -15,16 +15,16 @@ public class ViewFactory {
    * @param model the given model
    * @return an appropriate type of view
    */
-  public static IView makeView(String arg, IModel model) {
+  public static IView makeView(String arg, IModel model, int tickPerSecond) {
     switch (arg) {
       case "text":
-        return new TextualView(model);
+        return new TextualView(model, tickPerSecond);
       case "svg":
-        return new SVGView(model);
+        return new SVGView(model, tickPerSecond);
       case "visual":
-        return new VisualView(model);
+        return new VisualView(model, tickPerSecond);
       case "playback":
-        return new EditView(model);
+        return new EditView(model, tickPerSecond);
       default:
         throw new IllegalArgumentException("Invalid view.");
     }

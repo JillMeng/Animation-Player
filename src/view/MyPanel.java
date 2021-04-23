@@ -10,6 +10,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+import controller.IController;
 import model.IModel;
 import model.IShape;
 
@@ -20,17 +21,19 @@ public class MyPanel extends JPanel {
   private IModel model;
   private Timer timer;
   private int tick = 0;
+  int tickPerSecond;
 
   /**
    * Constructs a panel using given model.
    *
    * @param model the model used to construct the panel
    */
-  public MyPanel(IModel model) {
+  public MyPanel(IModel model, int tickPerSecond) {
     this.model = model;
+    this.tickPerSecond = tickPerSecond;
     this.setPreferredSize(new Dimension(model.getBoundWidth(),model.getBoundHeight()));
     this.setBackground(Color.WHITE);
-    timer = new Timer(1000 / model.getTickPerSecond(), new ActionListener() {
+    timer = new Timer(1000 / tickPerSecond, new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         if (tick >= model.longestTime()) {
@@ -45,6 +48,12 @@ public class MyPanel extends JPanel {
     timer.setRepeats(true);
     timer.start();
   }
+
+//  public MyPanel(IModel model) {
+//    this.model = model;
+//    this.setPreferredSize(new Dimension(model.getBoundWidth(), model.getBoundHeight()));
+//    this.setBackground(Color.WHITE);
+//  }
 
   /**
    * Draw all the shapes from the model at a time point.
@@ -69,5 +78,29 @@ public class MyPanel extends JPanel {
           throw new IllegalArgumentException("Cannot draw such shape.");
       }
     }
+  }
+
+  public void setTickPerSecond(int tickPerSecond) {
+    this.tickPerSecond = tickPerSecond;
+  }
+
+  public int getTickPerSecond() {
+    return this.tickPerSecond;
+  }
+
+  public void setTimer(Timer timer) {
+    this.timer = timer;
+  }
+
+  public Timer getTimer() {
+    return timer;
+  }
+
+  public int getTick() {
+    return tick;
+  }
+
+  public void setTick(int tick) {
+    this.tick = tick;
   }
 }
