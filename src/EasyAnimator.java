@@ -74,7 +74,7 @@ public final class EasyAnimator {
           outputView.showVisual();
         }
         else if (args[i + 1].equals("playback")) {
-          IController controller = new Controller(model, (EditView) outputView, tickPerSecond);
+          IController controller = new Controller((Model) model, (EditView) outputView, tickPerSecond);
           controller.setView();
         }
         else {

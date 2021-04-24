@@ -1,5 +1,6 @@
 package model;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
 /**
@@ -122,4 +123,5 @@ public interface IModel {
    */
   int longestTime();
 
+  String[] getShapeNames();
 }

@@ -7,7 +7,7 @@ public interface IController {
   void pause();
   void resume();
   void restart();
-  void enableLooping();
-  void increaseSpeed();
-  void decreaseSpeed();
+  void enableLooping(boolean isLooping);
+  void setTickPerSecond(int tickPerSecond);
+  void deleteShape(String shapeName);
 }

@@ -23,10 +23,9 @@ import view.ViewFactory;
 
 public class Controller extends JPanel implements IController {
 
-  private IModel model;
+  private Model model;
   private EditView view;
   private Timer timer;
-  private int tickPerSecond;
   private int tick = 0;
   private MyPanel panel;
   boolean looping;
@@ -35,18 +34,21 @@ public class Controller extends JPanel implements IController {
    * Construct the controller that can take in a model and show a view.
    * @param model a non-null animation Model
    */
-  public Controller(IModel model, EditView view, int tickPerSecond) {
+  public Controller(Model model, EditView view, int tickPerSecond) {
     this.model = model;
     this.view = view;
-    this.tickPerSecond = tickPerSecond;
     this.looping = false;
 
     timer = new Timer(1000 / tickPerSecond, new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         if (tick >= model.longestTime()) {
-          timer.stop();
-          return;
+          if (!looping){
+            timer.stop();
+            return;
+          } else {
+            tick = 0;
+          }
         }
         view.draw(tick++);
         view.refresh();
@@ -88,26 +90,20 @@ public class Controller extends JPanel implements IController {
   }
 
   @Override
-  public void enableLooping() {
-
-  }
-
-//  @Override
-//  public void disableLooping() {
-//  }
-
-  @Override
-  public void increaseSpeed() {
-//    view.getPanel().getTimer().setDelay(view.getPanel().getTickPerSecond() + 1);
-    tickPerSecond = tickPerSecond + 50;
-    timer.restart();
+  public void enableLooping(boolean isLooping) {
+    looping = isLooping;
+    if (!timer.isRunning()){
+      timer.start();
+    }
   }
 
   @Override
-  public void decreaseSpeed() {
-//    view.getPanel().getTimer().setDelay(1000 / view.getPanel().getTickPerSecond() - 10);
-    tickPerSecond = tickPerSecond - 5;
-    timer.restart();
+  public void setTickPerSecond(int tickPerSecond){
+    this.timer.setDelay(1000/tickPerSecond);
   }
 
+  @Override
+  public void deleteShape(String shapeName) {
+    model.deleteShape(shapeName);
+  }
 }

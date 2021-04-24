@@ -6,7 +6,6 @@ import java.awt.Color;
  * This interface represents a shape.
  */
 public interface IShape {
-
   /**
    * Returns the name id of the shape.
    *
@@ -171,4 +170,8 @@ public interface IShape {
    * @return the order of shapes in the shape list
    */
   int getShapeOrder();
+
+  void setVisibility(boolean isVisbile);
+
+  boolean getVisibility();
 }

@@ -142,6 +142,19 @@ public class Model implements IModel {
             .max(Comparator.comparing(IMotion::getT2)).get().getT2();
   }
 
+  @Override
+  public String[] getShapeNames() {
+    return shapeList.stream().filter(x -> x.getVisibility()).map(IShape::getName).toArray(String[]::new);
+  }
+
+  public void deleteShape(String shapeName){
+    for (var i = 0; i < shapeList.size(); i++){
+      if (shapeList.get(i).getName() == shapeName){
+        shapeList.get(i).setVisibility(false);
+      }
+    }
+  }
+
   /**
    * A helper method to calculate the tweening factor at a given tick.
    *
