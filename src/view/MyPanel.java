@@ -54,6 +54,9 @@ public class MyPanel extends JPanel {
     Graphics2D graphics2D = (Graphics2D) g;
     //Draw all the shapes from the model at tick
     for (IShape shape : currentShapes) {
+      if (!shape.getVisibility()) {
+        continue;
+      }
       graphics2D.setColor(shape.getRGB());
       switch (shape.getType()) {
         case "rectangle":

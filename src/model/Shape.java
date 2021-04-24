@@ -19,6 +19,8 @@ public class Shape implements IShape {
   int appearT;
   int disappearT;
   int shapeOrder;
+  boolean isVisible = true;
+
 
   /**
    * Construct a shape using given name, type, x-position, y-position, width, height,
@@ -188,6 +190,16 @@ public class Shape implements IShape {
   @Override
   public int getShapeOrder() {
     return shapeOrder;
+  }
+
+  @Override
+  public void setVisibility(boolean isVisible) {
+    this.isVisible = isVisible;
+  }
+
+  @Override
+  public boolean getVisibility() {
+    return this.isVisible;
   }
 
   @Override

@@ -5,6 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -16,7 +19,7 @@ import model.IModel;
 public class EditView extends JFrame implements IView {
 
   private JButton startButton, pauseButton, resumeButton, restartButton, enableLoopingButton,
-          disableLoopingButton, increaseSpeedButton, decreaseSpeedButton;
+          disableLoopingButton, increaseSpeedButton, decreaseSpeedButton, deleteShapeButton;
 
   private MyPanel panel;
   private JPanel buttonPanel;
@@ -25,6 +28,8 @@ public class EditView extends JFrame implements IView {
   private int tickPerSecond;
   private JTextField input;
   private JCheckBox checkBox;
+  private JLabel speedLabel;
+  private JComboBox shapeBox;
 
 
   public EditView(IModel model, int tickPerSecond) {
@@ -53,8 +58,13 @@ public class EditView extends JFrame implements IView {
     this.add(buttonPanel, BorderLayout.SOUTH);
 
     //input textfield
-    input = new JTextField(15);
-    buttonPanel.add(input);
+    shapeBox = new JComboBox<String>(model.getShapeNames());
+    buttonPanel.add(shapeBox);
+
+    // delete shape
+    deleteShapeButton = new JButton("Delete");
+    deleteShapeButton.setActionCommand("Delete Shape Button");
+    buttonPanel.add(deleteShapeButton);
 
     //checkboxes
     checkBox = new JCheckBox("Enable looping ");
@@ -101,6 +111,9 @@ public class EditView extends JFrame implements IView {
     decreaseSpeedButton.setActionCommand("Decrease Speed Button");
     buttonPanel.add(decreaseSpeedButton);
 
+    speedLabel = new JLabel("Speed:" + (this.tickPerSecond));
+    buttonPanel.add(speedLabel);
+
     this.pack();
     this.setVisible(true);
   }
@@ -112,9 +125,23 @@ public class EditView extends JFrame implements IView {
     restartButton.addActionListener(evt -> features.restart());
 //    enableLoopingButton.addActionListener(evt -> features.enableLooping());
 //    disableLoopingButton.addActionListener(evt -> features.disableLooping());
-    increaseSpeedButton.addActionListener(evt -> features.increaseSpeed());
-    decreaseSpeedButton.addActionListener(evt -> features.decreaseSpeed());
-    checkBox.addActionListener(evt -> features.enableLooping());
+    increaseSpeedButton.addActionListener(evt -> {
+      tickPerSecond += 5;
+      speedLabel.setText("Speed:" + (this.tickPerSecond));
+      features.setTickPerSecond(tickPerSecond);
+    });
+    decreaseSpeedButton.addActionListener(evt -> {
+      tickPerSecond = tickPerSecond > 5 ? tickPerSecond -5: tickPerSecond;
+      speedLabel.setText("Speed" + (this.tickPerSecond));
+      features.setTickPerSecond(tickPerSecond);
+    });
+    checkBox.addActionListener(evt -> {
+      features.enableLooping(checkBox.isSelected());
+    });
+    deleteShapeButton.addActionListener(evt -> {
+      features.deleteShape(shapeBox.getSelectedItem().toString());
+      shapeBox.removeItem(shapeBox.getSelectedItem().toString());
+    });
   }
 
   public void makeVisible() {
