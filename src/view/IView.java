@@ -1,7 +1,5 @@
 package view;
 
-import java.awt.*;
-import java.util.Timer;
 
 import controller.IController;
 
@@ -23,11 +21,24 @@ public interface IView {
   void showVisual();
 
   /**
-   * Transmit an error message to the view, in case
-   * the command could not be processed correctly
-   * @param error
+   * Get the panel to return the current shapes at tick.
+   * @param tick the given tick.
    */
-  void showErrorMessage(String error);
+  void draw(int tick);
 
+  /**
+   * Get the panel to repaint component in the paintComponent method.
+   */
+  void refresh();
 
+  /**
+   * A method that sets the features to call the corresponding method in the controller.
+   * @param features he corresponding features in the controller.
+   */
+  void addFeatures(IController features);
+
+  /**
+   * Set the view to be visible.
+   */
+  void makeVisible();
 }

@@ -1,32 +1,25 @@
 package view;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 import controller.IController;
 import model.IModel;
 
+/**
+ * This view class implements IView interface and build a frame where all the UI panel and features
+ * are added.
+ */
 public class EditView extends JFrame implements IView {
 
-  private JButton startButton, pauseButton, resumeButton, restartButton, enableLoopingButton,
-          disableLoopingButton, increaseSpeedButton, decreaseSpeedButton, deleteShapeButton;
-
+  private JButton startButton, pauseButton, resumeButton, restartButton,
+          increaseSpeedButton, decreaseSpeedButton, deleteShapeButton;
   private MyPanel panel;
   private JPanel buttonPanel;
   private JScrollPane scrollPane;
   private final IModel model;
   private int tickPerSecond;
-  private JTextField input;
   private JCheckBox checkBox;
   private JLabel speedLabel;
   private JComboBox shapeBox;
@@ -57,7 +50,7 @@ public class EditView extends JFrame implements IView {
     buttonPanel.setLayout(new FlowLayout());
     this.add(buttonPanel, BorderLayout.SOUTH);
 
-    //input textfield
+    //input text field
     shapeBox = new JComboBox<String>(model.getShapeNames());
     buttonPanel.add(shapeBox);
 
@@ -91,16 +84,6 @@ public class EditView extends JFrame implements IView {
     restartButton.setActionCommand("Restart Button");
     buttonPanel.add(restartButton);
 
-//    // enable looping button
-//    enableLoopingButton = new JButton("Enable Looping");
-//    enableLoopingButton.setActionCommand("Enable Looping Button");
-//    this.add(enableLoopingButton);
-//
-//    // disable looping button
-//    disableLoopingButton = new JButton("Disable Looping");
-//    disableLoopingButton.setActionCommand("Disable Looping Button");
-//    this.add(disableLoopingButton);
-
     // increase speed button
     increaseSpeedButton = new JButton("Accelerate");
     increaseSpeedButton.setActionCommand("Increase Speed Button");
@@ -111,7 +94,7 @@ public class EditView extends JFrame implements IView {
     decreaseSpeedButton.setActionCommand("Decrease Speed Button");
     buttonPanel.add(decreaseSpeedButton);
 
-    speedLabel = new JLabel("Speed:" + (this.tickPerSecond));
+    speedLabel = new JLabel("Current Speed:" + (this.tickPerSecond));
     buttonPanel.add(speedLabel);
 
     this.pack();
@@ -123,16 +106,16 @@ public class EditView extends JFrame implements IView {
     pauseButton.addActionListener(evt -> features.pause());
     resumeButton.addActionListener(evt -> features.resume());
     restartButton.addActionListener(evt -> features.restart());
-//    enableLoopingButton.addActionListener(evt -> features.enableLooping());
-//    disableLoopingButton.addActionListener(evt -> features.disableLooping());
     increaseSpeedButton.addActionListener(evt -> {
       tickPerSecond += 5;
       speedLabel.setText("Speed:" + (this.tickPerSecond));
       features.setTickPerSecond(tickPerSecond);
     });
     decreaseSpeedButton.addActionListener(evt -> {
-      tickPerSecond = tickPerSecond > 5 ? tickPerSecond -5: tickPerSecond;
-      speedLabel.setText("Speed" + (this.tickPerSecond));
+      if (tickPerSecond > 5) {
+        tickPerSecond -= 5;
+      }
+      speedLabel.setText("Speed:" + (this.tickPerSecond));
       features.setTickPerSecond(tickPerSecond);
     });
     checkBox.addActionListener(evt -> {
@@ -156,7 +139,6 @@ public class EditView extends JFrame implements IView {
     panel.drawShapes(tick);
   }
 
-
   @Override
   public String showView() {
     throw new UnsupportedOperationException("Cannot perform such operation.");
@@ -164,12 +146,7 @@ public class EditView extends JFrame implements IView {
 
   @Override
   public void showVisual() {
+    throw new UnsupportedOperationException("Cannot perform such operation.");
   }
-
-  @Override
-  public void showErrorMessage(String error) {
-    JOptionPane.showMessageDialog(this, error, "Error", JOptionPane.ERROR_MESSAGE);
-  }
-
 
 }

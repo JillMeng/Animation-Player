@@ -131,10 +131,6 @@ public class Model implements IModel {
     this.boundHeight = boundHeight;
   }
 
-//  @Override
-//  public void setTickPerSecond(int tickPerSecond) {
-//    this.tickPerSecond = tickPerSecond;
-//  }
 
   @Override
   public int longestTime() {
@@ -144,27 +140,19 @@ public class Model implements IModel {
 
   @Override
   public String[] getShapeNames() {
-    return shapeList.stream().filter(x -> x.getVisibility()).map(IShape::getName).toArray(String[]::new);
+    return shapeList.stream().filter(IShape::getVisibility)
+            .map(IShape::getName).toArray(String[]::new);
   }
 
-  public void deleteShape(String shapeName){
-    for (var i = 0; i < shapeList.size(); i++){
-      if (shapeList.get(i).getName() == shapeName){
-        shapeList.get(i).setVisibility(false);
+  public void deleteShape(String shapeName) {
+    for (IShape shape : shapeList) {
+      if (shape.getName().equals(shapeName)) {
+        shape.setVisibility(false);
       }
     }
   }
 
-  /**
-   * A helper method to calculate the tweening factor at a given tick.
-   *
-   * @param start       the start time
-   * @param end         the end time
-   * @param startStatus the start value
-   * @param endStatus   the end value
-   * @param tick        current time
-   * @return the calculated factor
-   */
+
   public double tweenHelper(int start, int end, int startStatus, int endStatus, int tick) {
     return (startStatus * (double) (end - tick) / (double) (end - start)
             + endStatus * (double) (tick - start) / (double) (end - start));

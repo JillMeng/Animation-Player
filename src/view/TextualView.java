@@ -48,8 +48,24 @@ public class TextualView implements IView {
     throw new UnsupportedOperationException("This operation is unsupported.");
   }
 
+
   @Override
-  public void showErrorMessage(String error) {
+  public void draw(int tick) {
+
+  }
+
+  @Override
+  public void refresh() {
+
+  }
+
+  @Override
+  public void addFeatures(IController features) {
+
+  }
+
+  @Override
+  public void makeVisible() {
 
   }
 

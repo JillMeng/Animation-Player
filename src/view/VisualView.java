@@ -43,20 +43,25 @@ public class VisualView implements IView {
   }
 
   @Override
-  public void showErrorMessage(String error) {
-
+  public void draw(int tick) {
+    panel.drawShapes(tick);
   }
 
+  @Override
+  public void refresh() {
+    panel.repaint();
+  }
 
-//  @Override
-//  public int getTickPerSecond() {
-//    return this.tickPerSecond;
-//  }
+  @Override
+  public void addFeatures(IController features) {
+    features.getTimer().start();
+  }
 
-//  @Override
-//  public void setTickPerSecond(int tickPerSecond) {
-//    this.tickPerSecond = tickPerSecond;
-//  }
+  @Override
+  public void makeVisible() {
+    panel.setVisible(true);
+  }
+
 
   /**
    * Used to show the visual view.
@@ -75,6 +80,6 @@ public class VisualView implements IView {
     JScrollPane scrollPane = new JScrollPane(panel);
     frame.add(scrollPane);
     scrollPane.setVisible(true);
-
   }
+
 }
