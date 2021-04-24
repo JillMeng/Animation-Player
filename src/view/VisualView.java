@@ -47,6 +47,26 @@ public class VisualView implements IView {
 
   }
 
+  @Override
+  public void draw(int tick) {
+    panel.drawShapes(tick);
+  }
+
+  @Override
+  public void refresh() {
+    panel.repaint();
+  }
+
+  @Override
+  public void addFeatures(IController features) {
+    features.getTimer().start();
+  }
+
+  @Override
+  public void makeVisible() {
+    panel.setVisible(true);
+  }
+
 
 //  @Override
 //  public int getTickPerSecond() {
@@ -77,4 +97,5 @@ public class VisualView implements IView {
     scrollPane.setVisible(true);
 
   }
+
 }

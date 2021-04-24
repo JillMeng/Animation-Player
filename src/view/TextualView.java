@@ -53,4 +53,24 @@ public class TextualView implements IView {
 
   }
 
+  @Override
+  public void draw(int tick) {
+
+  }
+
+  @Override
+  public void refresh() {
+
+  }
+
+  @Override
+  public void addFeatures(IController features) {
+
+  }
+
+  @Override
+  public void makeVisible() {
+
+  }
+
 }

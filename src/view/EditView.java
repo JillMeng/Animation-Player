@@ -131,8 +131,11 @@ public class EditView extends JFrame implements IView {
       features.setTickPerSecond(tickPerSecond);
     });
     decreaseSpeedButton.addActionListener(evt -> {
-      tickPerSecond = tickPerSecond > 5 ? tickPerSecond -5: tickPerSecond;
-      speedLabel.setText("Speed" + (this.tickPerSecond));
+//      tickPerSecond = tickPerSecond > 5 ? tickPerSecond -5: tickPerSecond;
+      if (tickPerSecond > 5) {
+        tickPerSecond -= 5;
+      }
+      speedLabel.setText("Speed:" + (this.tickPerSecond));
       features.setTickPerSecond(tickPerSecond);
     });
     checkBox.addActionListener(evt -> {

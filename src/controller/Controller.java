@@ -24,7 +24,7 @@ import view.ViewFactory;
 public class Controller extends JPanel implements IController {
 
   private Model model;
-  private EditView view;
+  private IView view;
   private Timer timer;
   private int tick = 0;
   private MyPanel panel;
@@ -34,7 +34,7 @@ public class Controller extends JPanel implements IController {
    * Construct the controller that can take in a model and show a view.
    * @param model a non-null animation Model
    */
-  public Controller(Model model, EditView view, int tickPerSecond) {
+  public Controller(Model model, IView view, int tickPerSecond) {
     this.model = model;
     this.view = view;
     this.looping = false;
@@ -106,4 +106,9 @@ public class Controller extends JPanel implements IController {
   public void deleteShape(String shapeName) {
     model.deleteShape(shapeName);
   }
+
+  public Timer getTimer() {
+    return this.timer;
+  }
+
 }
