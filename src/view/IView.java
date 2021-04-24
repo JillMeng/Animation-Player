@@ -29,5 +29,11 @@ public interface IView {
    */
   void showErrorMessage(String error);
 
+  void draw(int tick);
 
+  void refresh();
+
+  void addFeatures(IController features);
+
+  void makeVisible();
 }

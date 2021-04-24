@@ -69,12 +69,13 @@ public final class EasyAnimator {
     for (int i = 0; i < args.length; i++) {
       if (args[i].equals("-view")) {
         IView outputView = ViewFactory.makeView(args[i + 1], model, tickPerSecond);
+        IController controller = new Controller((Model) model, outputView, tickPerSecond);
 //        controller.setView();
         if (args[i + 1].equals("visual")) {
+          controller.setView();
           outputView.showVisual();
         }
         else if (args[i + 1].equals("playback")) {
-          IController controller = new Controller((Model) model, (EditView) outputView, tickPerSecond);
           controller.setView();
         }
         else {

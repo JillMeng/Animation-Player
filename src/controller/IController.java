@@ -1,6 +1,8 @@
 package controller;
 
 
+import javax.swing.*;
+
 public interface IController {
   void setView();
   void start();
@@ -10,4 +12,5 @@ public interface IController {
   void enableLooping(boolean isLooping);
   void setTickPerSecond(int tickPerSecond);
   void deleteShape(String shapeName);
+  Timer getTimer();
 }

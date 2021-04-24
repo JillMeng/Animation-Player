@@ -1,0 +1,304 @@
+Create rgb(33,94,248) rectangle background with corner at (0, 0), width 800 and height 800
+Create rgb(0,0,0) rectangle B0 with corner at (80, 424), width 100 and height 326
+Create rgb(0,0,0) rectangle B1 with corner at (260, 365), width 100 and height 385
+Create rgb(0,0,0) rectangle B2 with corner at (440, 375), width 100 and height 375
+Create rgb(0,0,0) rectangle B3 with corner at (620, 445), width 100 and height 305
+Create rgb(255,255,255) rectangle window000 with corner at (100, 850), width 20 and height 20
+Create rgb(255,255,255) rectangle window001 with corner at (140, 850), width 20 and height 20
+Create rgb(255,255,255) rectangle window010 with corner at (100, 890), width 20 and height 20
+Create rgb(255,255,255) rectangle window011 with corner at (140, 890), width 20 and height 20
+Create rgb(255,255,255) rectangle window020 with corner at (100, 930), width 20 and height 20
+Create rgb(255,255,255) rectangle window021 with corner at (140, 930), width 20 and height 20
+Create rgb(255,255,255) rectangle window030 with corner at (100, 970), width 20 and height 20
+Create rgb(255,255,255) rectangle window031 with corner at (140, 970), width 20 and height 20
+Create rgb(255,255,255) rectangle window040 with corner at (100, 1010), width 20 and height 20
+Create rgb(255,255,255) rectangle window041 with corner at (140, 1010), width 20 and height 20
+Create rgb(255,255,255) rectangle window050 with corner at (100, 1050), width 20 and height 20
+Create rgb(255,255,255) rectangle window051 with corner at (140, 1050), width 20 and height 20
+Create rgb(255,255,255) rectangle window060 with corner at (100, 1090), width 20 and height 20
+Create rgb(255,255,255) rectangle window061 with corner at (140, 1090), width 20 and height 20
+Create rgb(255,255,255) rectangle window100 with corner at (280, -750), width 20 and height 20
+Create rgb(255,255,255) rectangle window101 with corner at (320, -750), width 20 and height 20
+Create rgb(255,255,255) rectangle window110 with corner at (280, -710), width 20 and height 20
+Create rgb(255,255,255) rectangle window111 with corner at (320, -710), width 20 and height 20
+Create rgb(255,255,255) rectangle window120 with corner at (280, -670), width 20 and height 20
+Create rgb(255,255,255) rectangle window121 with corner at (320, -670), width 20 and height 20
+Create rgb(255,255,255) rectangle window130 with corner at (280, -630), width 20 and height 20
+Create rgb(255,255,255) rectangle window131 with corner at (320, -630), width 20 and height 20
+Create rgb(255,255,255) rectangle window140 with corner at (280, -590), width 20 and height 20
+Create rgb(255,255,255) rectangle window141 with corner at (320, -590), width 20 and height 20
+Create rgb(255,255,255) rectangle window150 with corner at (280, -550), width 20 and height 20
+Create rgb(255,255,255) rectangle window151 with corner at (320, -550), width 20 and height 20
+Create rgb(255,255,255) rectangle window160 with corner at (280, -510), width 20 and height 20
+Create rgb(255,255,255) rectangle window161 with corner at (320, -510), width 20 and height 20
+Create rgb(255,255,255) rectangle window170 with corner at (280, -470), width 20 and height 20
+Create rgb(255,255,255) rectangle window171 with corner at (320, -470), width 20 and height 20
+Create rgb(255,255,255) rectangle window180 with corner at (280, -430), width 20 and height 20
+Create rgb(255,255,255) rectangle window181 with corner at (320, -430), width 20 and height 20
+Create rgb(255,255,255) rectangle window200 with corner at (460, 850), width 20 and height 20
+Create rgb(255,255,255) rectangle window201 with corner at (500, 850), width 20 and height 20
+Create rgb(255,255,255) rectangle window210 with corner at (460, 890), width 20 and height 20
+Create rgb(255,255,255) rectangle window211 with corner at (500, 890), width 20 and height 20
+Create rgb(255,255,255) rectangle window220 with corner at (460, 930), width 20 and height 20
+Create rgb(255,255,255) rectangle window221 with corner at (500, 930), width 20 and height 20
+Create rgb(255,255,255) rectangle window230 with corner at (460, 970), width 20 and height 20
+Create rgb(255,255,255) rectangle window231 with corner at (500, 970), width 20 and height 20
+Create rgb(255,255,255) rectangle window240 with corner at (460, 1010), width 20 and height 20
+Create rgb(255,255,255) rectangle window241 with corner at (500, 1010), width 20 and height 20
+Create rgb(255,255,255) rectangle window250 with corner at (460, 1050), width 20 and height 20
+Create rgb(255,255,255) rectangle window251 with corner at (500, 1050), width 20 and height 20
+Create rgb(255,255,255) rectangle window260 with corner at (460, 1090), width 20 and height 20
+Create rgb(255,255,255) rectangle window261 with corner at (500, 1090), width 20 and height 20
+Create rgb(255,255,255) rectangle window270 with corner at (460, 1130), width 20 and height 20
+Create rgb(255,255,255) rectangle window271 with corner at (500, 1130), width 20 and height 20
+Create rgb(255,255,255) rectangle window300 with corner at (640, -750), width 20 and height 20
+Create rgb(255,255,255) rectangle window301 with corner at (680, -750), width 20 and height 20
+Create rgb(255,255,255) rectangle window310 with corner at (640, -710), width 20 and height 20
+Create rgb(255,255,255) rectangle window311 with corner at (680, -710), width 20 and height 20
+Create rgb(255,255,255) rectangle window320 with corner at (640, -670), width 20 and height 20
+Create rgb(255,255,255) rectangle window321 with corner at (680, -670), width 20 and height 20
+Create rgb(255,255,255) rectangle window330 with corner at (640, -630), width 20 and height 20
+Create rgb(255,255,255) rectangle window331 with corner at (680, -630), width 20 and height 20
+Create rgb(255,255,255) rectangle window340 with corner at (640, -590), width 20 and height 20
+Create rgb(255,255,255) rectangle window341 with corner at (680, -590), width 20 and height 20
+Create rgb(255,255,255) rectangle window350 with corner at (640, -550), width 20 and height 20
+Create rgb(255,255,255) rectangle window351 with corner at (680, -550), width 20 and height 20
+Create rgb(255,255,255) rectangle window360 with corner at (640, -510), width 20 and height 20
+Create rgb(255,255,255) rectangle window361 with corner at (680, -510), width 20 and height 20
+Create rgb(229,229,255) ellipse moon with center at (200, 200), radius 100 and 100
+Create rgb(33,94,248) ellipse eclipse with center at (400, 0), radius 100 and 100
+Create rgb(255,255,255) ellipse star0 with center at (223, 66), radius 6 and 6
+Create rgb(255,255,255) ellipse star1 with center at (585, 211), radius 6 and 6
+Create rgb(255,255,255) ellipse star2 with center at (489, 77), radius 6 and 6
+Create rgb(255,255,255) ellipse star3 with center at (374, 286), radius 6 and 6
+Create rgb(255,255,255) ellipse star4 with center at (708, 281), radius 6 and 6
+Create rgb(255,255,255) ellipse star5 with center at (508, 260), radius 6 and 6
+Create rgb(255,255,255) ellipse star6 with center at (529, 70), radius 6 and 6
+Create rgb(255,255,255) ellipse star7 with center at (332, 65), radius 6 and 6
+Create rgb(255,255,255) ellipse star8 with center at (311, 147), radius 6 and 6
+Create rgb(255,255,255) ellipse star9 with center at (170, 281), radius 6 and 6
+Create rgb(255,255,255) ellipse star10 with center at (719, 102), radius 6 and 6
+Create rgb(255,255,255) ellipse star11 with center at (524, 264), radius 6 and 6
+Create rgb(255,255,255) ellipse star12 with center at (768, 194), radius 6 and 6
+Create rgb(255,255,255) ellipse star13 with center at (766, 179), radius 6 and 6
+Create rgb(255,255,255) ellipse star14 with center at (510, 78), radius 6 and 6
+Create rgb(255,255,255) ellipse star15 with center at (621, 149), radius 6 and 6
+Create rgb(255,255,255) ellipse star16 with center at (491, 252), radius 6 and 6
+Create rgb(255,255,255) ellipse star17 with center at (405, 63), radius 6 and 6
+Create rgb(255,255,255) ellipse star18 with center at (550, 267), radius 6 and 6
+Create rgb(255,255,255) ellipse star19 with center at (108, 197), radius 6 and 6
+Create rgb(255,255,255) ellipse star20 with center at (737, 78), radius 6 and 6
+Create rgb(255,255,255) ellipse star21 with center at (795, 137), radius 6 and 6
+Create rgb(255,255,255) ellipse star22 with center at (184, 125), radius 6 and 6
+Create rgb(255,255,255) ellipse star23 with center at (134, 230), radius 6 and 6
+Create rgb(255,255,255) ellipse star24 with center at (244, 153), radius 6 and 6
+Create rgb(255,255,255) ellipse star25 with center at (259, 119), radius 6 and 6
+Create rgb(255,255,255) ellipse star26 with center at (322, 269), radius 6 and 6
+Create rgb(255,255,255) ellipse star27 with center at (412, 182), radius 6 and 6
+Create rgb(255,255,255) ellipse star28 with center at (674, 137), radius 6 and 6
+Create rgb(255,255,255) ellipse star29 with center at (46, 246), radius 6 and 6
+Create rgb(255,255,255) ellipse star30 with center at (388, 315), radius 6 and 6
+Create rgb(255,255,255) ellipse star31 with center at (185, 236), radius 6 and 6
+Create rgb(255,255,255) ellipse star32 with center at (550, 232), radius 6 and 6
+Create rgb(255,255,255) ellipse star33 with center at (656, 101), radius 6 and 6
+Create rgb(255,255,255) ellipse star34 with center at (283, 111), radius 6 and 6
+Create rgb(255,255,255) ellipse star35 with center at (649, 326), radius 6 and 6
+Create rgb(255,255,255) ellipse star36 with center at (691, 267), radius 6 and 6
+Create rgb(255,255,255) ellipse star37 with center at (113, 276), radius 6 and 6
+Create rgb(255,255,255) ellipse star38 with center at (604, 302), radius 6 and 6
+Create rgb(255,255,255) ellipse star39 with center at (462, 162), radius 6 and 6
+
+background appears at time t=1 and disappears at time t=50
+B0 appears at time t=1 and disappears at time t=200
+B1 appears at time t=1 and disappears at time t=200
+B2 appears at time t=1 and disappears at time t=200
+B3 appears at time t=1 and disappears at time t=200
+window000 appears at time t=1 and disappears at time t=20
+window001 appears at time t=1 and disappears at time t=20
+window010 appears at time t=1 and disappears at time t=20
+window011 appears at time t=1 and disappears at time t=20
+window020 appears at time t=1 and disappears at time t=20
+window021 appears at time t=1 and disappears at time t=20
+window030 appears at time t=1 and disappears at time t=20
+window031 appears at time t=1 and disappears at time t=20
+window040 appears at time t=1 and disappears at time t=20
+window041 appears at time t=1 and disappears at time t=20
+window050 appears at time t=1 and disappears at time t=20
+window051 appears at time t=1 and disappears at time t=20
+window060 appears at time t=1 and disappears at time t=20
+window061 appears at time t=1 and disappears at time t=20
+window100 appears at time t=1 and disappears at time t=20
+window101 appears at time t=1 and disappears at time t=20
+window110 appears at time t=1 and disappears at time t=20
+window111 appears at time t=1 and disappears at time t=20
+window120 appears at time t=1 and disappears at time t=20
+window121 appears at time t=1 and disappears at time t=20
+window130 appears at time t=1 and disappears at time t=20
+window131 appears at time t=1 and disappears at time t=20
+window140 appears at time t=1 and disappears at time t=20
+window141 appears at time t=1 and disappears at time t=20
+window150 appears at time t=1 and disappears at time t=20
+window151 appears at time t=1 and disappears at time t=20
+window160 appears at time t=1 and disappears at time t=20
+window161 appears at time t=1 and disappears at time t=20
+window170 appears at time t=1 and disappears at time t=20
+window171 appears at time t=1 and disappears at time t=20
+window180 appears at time t=1 and disappears at time t=20
+window181 appears at time t=1 and disappears at time t=20
+window200 appears at time t=1 and disappears at time t=20
+window201 appears at time t=1 and disappears at time t=20
+window210 appears at time t=1 and disappears at time t=20
+window211 appears at time t=1 and disappears at time t=20
+window220 appears at time t=1 and disappears at time t=20
+window221 appears at time t=1 and disappears at time t=20
+window230 appears at time t=1 and disappears at time t=20
+window231 appears at time t=1 and disappears at time t=20
+window240 appears at time t=1 and disappears at time t=20
+window241 appears at time t=1 and disappears at time t=20
+window250 appears at time t=1 and disappears at time t=20
+window251 appears at time t=1 and disappears at time t=20
+window260 appears at time t=1 and disappears at time t=20
+window261 appears at time t=1 and disappears at time t=20
+window270 appears at time t=1 and disappears at time t=20
+window271 appears at time t=1 and disappears at time t=20
+window300 appears at time t=1 and disappears at time t=20
+window301 appears at time t=1 and disappears at time t=20
+window310 appears at time t=1 and disappears at time t=20
+window311 appears at time t=1 and disappears at time t=20
+window320 appears at time t=1 and disappears at time t=20
+window321 appears at time t=1 and disappears at time t=20
+window330 appears at time t=1 and disappears at time t=20
+window331 appears at time t=1 and disappears at time t=20
+window340 appears at time t=1 and disappears at time t=20
+window341 appears at time t=1 and disappears at time t=20
+window350 appears at time t=1 and disappears at time t=20
+window351 appears at time t=1 and disappears at time t=20
+window360 appears at time t=1 and disappears at time t=20
+window361 appears at time t=1 and disappears at time t=20
+moon appears at time t=1 and disappears at time t=200
+eclipse appears at time t=1 and disappears at time t=50
+star0 appears at time t=108 and disappears at time t=200
+star1 appears at time t=120 and disappears at time t=200
+star2 appears at time t=110 and disappears at time t=200
+star3 appears at time t=93 and disappears at time t=200
+star4 appears at time t=83 and disappears at time t=200
+star5 appears at time t=97 and disappears at time t=200
+star6 appears at time t=92 and disappears at time t=200
+star7 appears at time t=117 and disappears at time t=200
+star8 appears at time t=86 and disappears at time t=200
+star9 appears at time t=88 and disappears at time t=200
+star10 appears at time t=90 and disappears at time t=200
+star11 appears at time t=129 and disappears at time t=200
+star12 appears at time t=86 and disappears at time t=200
+star13 appears at time t=113 and disappears at time t=200
+star14 appears at time t=98 and disappears at time t=200
+star15 appears at time t=114 and disappears at time t=200
+star16 appears at time t=106 and disappears at time t=200
+star17 appears at time t=89 and disappears at time t=200
+star18 appears at time t=113 and disappears at time t=200
+star19 appears at time t=94 and disappears at time t=200
+star20 appears at time t=103 and disappears at time t=200
+star21 appears at time t=126 and disappears at time t=200
+star22 appears at time t=89 and disappears at time t=200
+star23 appears at time t=96 and disappears at time t=200
+star24 appears at time t=120 and disappears at time t=200
+star25 appears at time t=112 and disappears at time t=200
+star26 appears at time t=106 and disappears at time t=200
+star27 appears at time t=117 and disappears at time t=200
+star28 appears at time t=119 and disappears at time t=200
+star29 appears at time t=96 and disappears at time t=200
+star30 appears at time t=123 and disappears at time t=200
+star31 appears at time t=121 and disappears at time t=200
+star32 appears at time t=109 and disappears at time t=200
+star33 appears at time t=94 and disappears at time t=200
+star34 appears at time t=84 and disappears at time t=200
+star35 appears at time t=92 and disappears at time t=200
+star36 appears at time t=115 and disappears at time t=200
+star37 appears at time t=99 and disappears at time t=200
+star38 appears at time t=99 and disappears at time t=200
+star39 appears at time t=127 and disappears at time t=200
+
+background changes from rgb(33,94,248) to rgb(16,45,248) from time t=50 to t=90
+window000 moves from (100, 850) to (100, 710) from time t=20 to t=60
+window001 moves from (140, 850) to (140, 710) from time t=20 to t=60
+window010 moves from (100, 890) to (100, 670) from time t=20 to t=60
+window011 moves from (140, 890) to (140, 670) from time t=20 to t=60
+window020 moves from (100, 930) to (100, 630) from time t=20 to t=60
+window021 moves from (140, 930) to (140, 630) from time t=20 to t=60
+window021 changes from rgb(255,255,255) to rgb(255,255,0) from time t=82 to t=87
+window030 moves from (100, 970) to (100, 590) from time t=20 to t=60
+window031 moves from (140, 970) to (140, 590) from time t=20 to t=60
+window040 moves from (100, 1010) to (100, 550) from time t=20 to t=60
+window041 moves from (140, 1010) to (140, 550) from time t=20 to t=60
+window041 changes from rgb(255,255,255) to rgb(255,255,0) from time t=147 to t=152
+window050 moves from (100, 1050) to (100, 510) from time t=20 to t=60
+window051 moves from (140, 1050) to (140, 510) from time t=20 to t=60
+window060 moves from (100, 1090) to (100, 470) from time t=20 to t=60
+window060 changes from rgb(255,255,255) to rgb(255,255,0) from time t=147 to t=152
+window061 moves from (140, 1090) to (140, 470) from time t=20 to t=60
+window061 changes from rgb(255,255,255) to rgb(255,255,0) from time t=93 to t=98
+window100 moves from (280, -750) to (280, 710) from time t=20 to t=60
+window101 moves from (320, -750) to (320, 710) from time t=20 to t=60
+window101 changes from rgb(255,255,255) to rgb(255,255,0) from time t=108 to t=113
+window110 moves from (280, -710) to (280, 670) from time t=20 to t=60
+window110 changes from rgb(255,255,255) to rgb(255,255,0) from time t=95 to t=100
+window111 moves from (320, -710) to (320, 670) from time t=20 to t=60
+window120 moves from (280, -670) to (280, 630) from time t=20 to t=60
+window121 moves from (320, -670) to (320, 630) from time t=20 to t=60
+window130 moves from (280, -630) to (280, 590) from time t=20 to t=60
+window131 moves from (320, -630) to (320, 590) from time t=20 to t=60
+window131 changes from rgb(255,255,255) to rgb(255,255,0) from time t=148 to t=153
+window140 moves from (280, -590) to (280, 550) from time t=20 to t=60
+window141 moves from (320, -590) to (320, 550) from time t=20 to t=60
+window150 moves from (280, -550) to (280, 510) from time t=20 to t=60
+window151 moves from (320, -550) to (320, 510) from time t=20 to t=60
+window151 changes from rgb(255,255,255) to rgb(255,255,0) from time t=99 to t=104
+window160 moves from (280, -510) to (280, 470) from time t=20 to t=60
+window161 moves from (320, -510) to (320, 470) from time t=20 to t=60
+window170 moves from (280, -470) to (280, 430) from time t=20 to t=60
+window171 moves from (320, -470) to (320, 430) from time t=20 to t=60
+window180 moves from (280, -430) to (280, 390) from time t=20 to t=60
+window181 moves from (320, -430) to (320, 390) from time t=20 to t=60
+window200 moves from (460, 850) to (460, 710) from time t=20 to t=60
+window200 changes from rgb(255,255,255) to rgb(255,255,0) from time t=127 to t=132
+window201 moves from (500, 850) to (500, 710) from time t=20 to t=60
+window210 moves from (460, 890) to (460, 670) from time t=20 to t=60
+window210 changes from rgb(255,255,255) to rgb(255,255,0) from time t=83 to t=88
+window211 moves from (500, 890) to (500, 670) from time t=20 to t=60
+window220 moves from (460, 930) to (460, 630) from time t=20 to t=60
+window221 moves from (500, 930) to (500, 630) from time t=20 to t=60
+window230 moves from (460, 970) to (460, 590) from time t=20 to t=60
+window231 moves from (500, 970) to (500, 590) from time t=20 to t=60
+window240 moves from (460, 1010) to (460, 550) from time t=20 to t=60
+window241 moves from (500, 1010) to (500, 550) from time t=20 to t=60
+window241 changes from rgb(255,255,255) to rgb(255,255,0) from time t=112 to t=117
+window250 moves from (460, 1050) to (460, 510) from time t=20 to t=60
+window250 changes from rgb(255,255,255) to rgb(255,255,0) from time t=128 to t=133
+window251 moves from (500, 1050) to (500, 510) from time t=20 to t=60
+window260 moves from (460, 1090) to (460, 470) from time t=20 to t=60
+window261 moves from (500, 1090) to (500, 470) from time t=20 to t=60
+window261 changes from rgb(255,255,255) to rgb(255,255,0) from time t=96 to t=101
+window270 moves from (460, 1130) to (460, 430) from time t=20 to t=60
+window271 moves from (500, 1130) to (500, 430) from time t=20 to t=60
+window300 moves from (640, -750) to (640, 710) from time t=20 to t=60
+window301 moves from (680, -750) to (680, 710) from time t=20 to t=60
+window301 changes from rgb(255,255,255) to rgb(255,255,0) from time t=135 to t=140
+window310 moves from (640, -710) to (640, 670) from time t=20 to t=60
+window310 changes from rgb(255,255,255) to rgb(255,255,0) from time t=103 to t=108
+window311 moves from (680, -710) to (680, 670) from time t=20 to t=60
+window320 moves from (640, -670) to (640, 630) from time t=20 to t=60
+window321 moves from (680, -670) to (680, 630) from time t=20 to t=60
+window330 moves from (640, -630) to (640, 590) from time t=20 to t=60
+window330 changes from rgb(255,255,255) to rgb(255,255,0) from time t=81 to t=86
+window331 moves from (680, -630) to (680, 590) from time t=20 to t=60
+window331 changes from rgb(255,255,255) to rgb(255,255,0) from time t=119 to t=124
+window340 moves from (640, -590) to (640, 550) from time t=20 to t=60
+window341 moves from (680, -590) to (680, 550) from time t=20 to t=60
+window350 moves from (640, -550) to (640, 510) from time t=20 to t=60
+window351 moves from (680, -550) to (680, 510) from time t=20 to t=60
+window351 changes from rgb(255,255,255) to rgb(255,255,0) from time t=100 to t=105
+window360 moves from (640, -510) to (640, 470) from time t=20 to t=60
+window360 changes from rgb(255,255,255) to rgb(255,255,0) from time t=99 to t=104
+window361 moves from (680, -510) to (680, 470) from time t=20 to t=60
+window361 changes from rgb(255,255,255) to rgb(255,255,0) from time t=99 to t=104
+eclipse moves from (400, 0) to (230, 180) from time t=50 to t=90
