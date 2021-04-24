@@ -1,19 +1,18 @@
-import java.awt.Desktop;
+import java.awt.*;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 import controller.Controller;
 import controller.IController;
-import model.AnimationReader;
 import model.AnimationBuilder;
-import model.Model;
+import model.AnimationReader;
 import model.IModel;
+import model.Model;
 import view.EditView;
 import view.IView;
 import view.ViewFactory;
