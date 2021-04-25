@@ -28,10 +28,9 @@ this class represents our textual output.
 This class represents our SVG view and the output is in SVG format.
 # Assignment 8 Controller
 ## Update 
-In the model directory we added the getShapeNames and deleteShape method. These two methods are used to get the list of shape names and make the specific one unvisitable in 
-order to delete the chosen shape in the EditView.
+In the IModel interface we added the getShapeNames and deleteShape method. These two methods are used to get the list of shape names and make the specific one unvisitable in order to delete the chosen shape in the EditView.
 In the view directory, we have moved the timer to the controller as expected from last assignment.
 ## IView - EditView
-We added a new EditView class that has standard video playback controls. We have added a variety of swing feature frame for the user to control the playback. We also created the callback methods in the view to call the corresponding methods in controller.
+We added a new EditView class that has standard video playback controls. We have added a variety of swing features (JButtons) for the user to control the playback. We also created the callback methods in the view to call the corresponding methods in controller.
 ## IController – Controller
-We constructed the controller with a model, pass in the speed of the animation to build the timer object, and then convey the outcomes to the user in the view. We have created the controller interface to illustrate the UI features we added in the EditView. When the UI feature is selected from the view, it calls back to the controller, controller process and logic and get the user to return the appropriate outcomes.
+We constructed the controller with a model, pass in the speed of the animation to build the timer object, and then convey the outcomes to the user in the view. We have created the controller interface to illustrate the UI features we added in the EditView. When the UI feature is selected from the view, it calls back to the controller, controller process the logic and return the appropriate outcomes to user.
